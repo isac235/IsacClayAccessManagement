@@ -192,7 +192,7 @@
                     UserValidation = user.MapUserToUserValidation(),
                     Token = token
                 };
-                this.logger.LogInformation("Test Logs");
+
                 // User authenticated, return user data
                 return Ok(result);
             }
