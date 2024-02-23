@@ -39,7 +39,6 @@ C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tes
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\NuGet.Frameworks.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\Serilog.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\System.Diagnostics.EventLog.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository.Tests\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll

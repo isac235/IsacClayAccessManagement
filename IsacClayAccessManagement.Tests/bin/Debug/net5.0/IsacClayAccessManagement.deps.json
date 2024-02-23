@@ -36,7 +36,6 @@
           "Data.Repository": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.0",
           "Serilog.AspNetCore": "8.0.1",
-          "Serilog.Sinks.File": "5.0.0",
           "Services": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -1005,8 +1004,7 @@
           "Domain.Model": "1.0.0",
           "Infrastructure.CrossCutting": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
-          "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
-          "Serilog": "3.1.1"
+          "Pomelo.EntityFrameworkCore.MySql": "5.0.0"
         },
         "runtime": {
           "Data.Repository.dll": {}

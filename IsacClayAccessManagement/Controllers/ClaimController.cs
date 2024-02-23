@@ -3,6 +3,7 @@
     using DTO;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
     using Services.Interfaces;
     using System;
     using System.Threading.Tasks;
@@ -13,10 +14,12 @@
     public class ClaimController : ControllerBase
     {
         private readonly IClaimService claimService;
+        private readonly ILogger<ClaimController> logger;
 
-        public ClaimController(IClaimService claimService)
+        public ClaimController(IClaimService claimService, ILogger<ClaimController> logger)
         {
             this.claimService = claimService;
+            this.logger = logger;
         }
 
         [Authorize(Roles = "Admin")]
@@ -35,6 +38,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating claim");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }

@@ -276,14 +276,6 @@
           }
         }
       },
-      "Serilog/3.1.1": {
-        "runtime": {
-          "lib/net5.0/Serilog.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "3.1.1.0"
-          }
-        }
-      },
       "System.Buffers/4.5.1": {},
       "System.Collections.Immutable/5.0.0": {},
       "System.ComponentModel.Annotations/5.0.0": {},
@@ -328,8 +320,7 @@
           "Domain.Model": "1.0.0",
           "Infrastructure.CrossCutting": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
-          "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
-          "Serilog": "3.1.1"
+          "Pomelo.EntityFrameworkCore.MySql": "5.0.0"
         },
         "runtime": {
           "Data.Repository.dll": {}
@@ -525,13 +516,6 @@
       "sha512": "sha512-5T1c5sjnzhryUwD647l209Fsvhfzu1R5vS9G26HuT6T8tEtli9xTBJInge+17Cqy2Q2XTYug+vVfTk3gNH5Zjw==",
       "path": "pomelo.entityframeworkcore.mysql/5.0.0",
       "hashPath": "pomelo.entityframeworkcore.mysql.5.0.0.nupkg.sha512"
-    },
-    "Serilog/3.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-P6G4/4Kt9bT635bhuwdXlJ2SCqqn2nhh4gqFqQueCOr9bK/e7W9ll/IoX1Ter948cV2Z/5+5v8pAfJYUISY03A==",
-      "path": "serilog/3.1.1",
-      "hashPath": "serilog.3.1.1.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",

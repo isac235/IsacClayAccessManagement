@@ -37,7 +37,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new UserClaimRepository(context);
+                var repository = new UserClaimRepository(context, null);
                 var userId = (await context.Users.FirstAsync()).UserID;
 
                 // Act
@@ -54,7 +54,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new UserClaimRepository(context);
+                var repository = new UserClaimRepository(context, null);
                 var userId = (await context.Users.FirstAsync()).UserID;
                 var newUserClaim = new UserClaim { UserClaimID = Guid.NewGuid(), UserID = userId };
 

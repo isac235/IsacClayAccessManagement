@@ -26,7 +26,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new ClaimRepository(context);
+                var repository = new ClaimRepository(context, null);
                 var newClaim = new Claim { ClaimID = Guid.NewGuid(), ClaimName = "New Claim" };
 
                 // Act
@@ -47,7 +47,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new ClaimRepository(context);
+                var repository = new ClaimRepository(context, null);
                 var existingClaimId = Guid.NewGuid();
                 var existingClaim = new Claim { ClaimID = existingClaimId, ClaimName = "Existing Claim" };
                 await context.Claims.AddAsync(existingClaim);
@@ -68,7 +68,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new ClaimRepository(context);
+                var repository = new ClaimRepository(context, null);
                 var nonExistingClaimId = Guid.NewGuid();
 
                 // Act

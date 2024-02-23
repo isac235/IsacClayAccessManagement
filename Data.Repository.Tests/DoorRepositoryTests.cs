@@ -26,7 +26,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new DoorRepository(context);
+                var repository = new DoorRepository(context, null);
                 var newDoor = new Door { DoorID = Guid.NewGuid(), OfficeID = Guid.NewGuid(), DoorName = "New Door" };
 
                 // Act
@@ -47,7 +47,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new DoorRepository(context);
+                var repository = new DoorRepository(context, null);
                 var officeId = Guid.NewGuid();
                 var doorId = Guid.NewGuid();
                 var existingDoor = new Door { DoorID = doorId, OfficeID = officeId, DoorName = "Existing Door" };
@@ -70,7 +70,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new DoorRepository(context);
+                var repository = new DoorRepository(context, null);
                 var nonExistingOfficeId = Guid.NewGuid();
                 var nonExistingDoorId = Guid.NewGuid();
 

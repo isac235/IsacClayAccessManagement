@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wJLhW0j2CwWQbNk/44zFI8c1a8T4muCu0Qlkbb5m+P9WnoOnSHpTf1fp5MGrF4WqhJRooa4w/oAomqzBln4/kA==",
+  "dgSpecHash": "FXT7G2GWmQ10zyPi0L4PTT4+bgOGK9kcPMOzo/RbbJbSnL34MQE8XWHyo+rA5NwA/RqZnOmJETWkMN/VQx2R5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Services.Tests\\Services.Tests.csproj",
   "expectedPackageFiles": [
@@ -60,7 +60,6 @@
     "C:\\Users\\Isac Carneiro\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Isac Carneiro\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Isac Carneiro\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-    "C:\\Users\\Isac Carneiro\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\Isac Carneiro\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Isac Carneiro\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Isac Carneiro\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

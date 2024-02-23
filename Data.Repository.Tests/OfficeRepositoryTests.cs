@@ -26,7 +26,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new OfficeRepository(context);
+                var repository = new OfficeRepository(context, null);
                 var newOffice = new Office { OfficeID = Guid.NewGuid(), OfficeName = "New Office" };
 
                 // Act
@@ -47,7 +47,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new OfficeRepository(context);
+                var repository = new OfficeRepository(context, null);
                 var existingOffice = new Office { OfficeID = Guid.NewGuid(), OfficeName = "Existing Office" };
                 await context.Offices.AddAsync(existingOffice);
                 await context.SaveChangesAsync();
@@ -67,7 +67,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new OfficeRepository(context);
+                var repository = new OfficeRepository(context, null);
                 var nonExistingId = Guid.NewGuid();
 
                 // Act

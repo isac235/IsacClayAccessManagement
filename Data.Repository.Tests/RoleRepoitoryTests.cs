@@ -26,7 +26,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new RoleRepository(context);
+                var repository = new RoleRepository(context, null);
                 var newRole = new Role { RoleID = Guid.NewGuid(), RoleName = "NewRole" };
 
                 // Act

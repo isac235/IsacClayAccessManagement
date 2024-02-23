@@ -11,6 +11,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Logging;
     using Microsoft.IdentityModel.Tokens;
     using Services.Interfaces;
     using Services.Mappers;
@@ -28,6 +29,7 @@
         private readonly IUserRoleMappingService userRoleMappingService;
         private readonly IAccessEventService accessEventService;
         private readonly IUserClaimService userClaimService;
+        private readonly ILogger<OfficeController> logger;
 
         public OfficeController(
             IConfiguration configuration,
@@ -37,7 +39,8 @@
             IScopeService scopeService,
             IUserRoleMappingService userRoleMappingService,
             IAccessEventService accessEventService,
-            IUserClaimService userClaimService)
+            IUserClaimService userClaimService,
+            ILogger<OfficeController> logger)
         {
             this.configuration = configuration;
             this.officeService = officeService;
@@ -47,6 +50,7 @@
             this.userRoleMappingService = userRoleMappingService;
             this.accessEventService = accessEventService;
             this.userClaimService = userClaimService;
+            this.logger = logger;
         }
 
         [Authorize(Roles = "Admin")]
@@ -67,6 +71,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating office.");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -89,6 +94,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating office user.");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -111,6 +117,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating user role");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -133,6 +140,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating office door");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -155,6 +163,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating door scope");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -183,13 +192,13 @@
                     UserValidation = user.MapUserToUserValidation(),
                     Token = token
                 };
-
+                this.logger.LogInformation("Test Logs");
                 // User authenticated, return user data
                 return Ok(result);
             }
             catch (Exception ex)
             {
-                // Log the exception
+                this.logger.LogError(ex, "Controller Error validating user");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -206,6 +215,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error gettting access events by officeId.");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -223,7 +233,7 @@
             }
             catch (Exception ex)
             {
-                // Log the exception
+                this.logger.LogError(ex, "Controller Error accessing event.");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -252,6 +262,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error generating token");
                 throw new ValidationException("Some error occurred while generation your validation token.", ex);
             }
         }

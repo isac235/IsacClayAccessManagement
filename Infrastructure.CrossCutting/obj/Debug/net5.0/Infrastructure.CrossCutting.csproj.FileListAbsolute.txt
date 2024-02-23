@@ -2,7 +2,6 @@ C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.Cros
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\bin\Debug\net5.0\Infrastructure.CrossCutting.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\bin\Debug\net5.0\ref\Infrastructure.CrossCutting.dll
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\bin\Debug\net5.0\Infrastructure.CrossCutting.pdb
-C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\obj\Debug\net5.0\Infrastructure.CrossCutting.csproj.AssemblyReference.cache
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\obj\Debug\net5.0\Infrastructure.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\obj\Debug\net5.0\Infrastructure.CrossCutting.AssemblyInfoInputs.cache
 C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Infrastructure.CrossCutting\obj\Debug\net5.0\Infrastructure.CrossCutting.AssemblyInfo.cs

@@ -33,7 +33,7 @@
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error occurred while getting userRoleMapping by userId: {UserId}", userId);
+                this.logger.LogError(ex, "Error occurred while getting userRoleMapping by userId: {UserId}", userId);
 
                 throw new RepositoryException(nameof(GetUserRoleMappingByUserIdAsync), ex.Message, ex);
             }
@@ -50,7 +50,7 @@
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error occurred while creating userRoles");
+                this.logger.LogError(ex, "Error occurred while creating userRoles");
 
                 throw new RepositoryException(nameof(CreateUserRolesAsync), ex.Message, ex);
             }

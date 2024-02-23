@@ -5,6 +5,7 @@
     using DTO;
     using IsacClayAccessManagement.Controllers;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using Services.Interfaces;
@@ -20,7 +21,7 @@
             var mockService = new Mock<IUserClaimService>();
             mockService.Setup(service => service.AssociateUserWithClaimAsync(userClaimDto.UserID, userClaimDto.ClaimID))
                 .ReturnsAsync(userClaimDto);
-            var controller = new UserClaimController(mockService.Object);
+            var controller = new UserClaimController(mockService.Object, null);
 
             // Act
             var result = await controller.AssociateUserWithClaim(userClaimDto) as OkObjectResult;
@@ -37,7 +38,7 @@
             // Arrange
             var userClaimDto = new UserClaim { UserID = Guid.Empty, ClaimID = Guid.Empty };
             var mockService = new Mock<IUserClaimService>();
-            var controller = new UserClaimController(mockService.Object);
+            var controller = new UserClaimController(mockService.Object, null);
             controller.ModelState.AddModelError("UserID", "UserID is required");
             controller.ModelState.AddModelError("ClaimID", "ClaimID is required");
 
@@ -53,11 +54,12 @@
         public async Task AssociateUserWithClaim_ServiceThrowsException_ReturnsInternalServerErrorResult()
         {
             // Arrange
+            var log = new Mock<ILogger<UserClaimController>>();
             var userClaimDto = new UserClaim { UserID = Guid.NewGuid(), ClaimID = Guid.NewGuid() };
             var mockService = new Mock<IUserClaimService>();
             mockService.Setup(service => service.AssociateUserWithClaimAsync(userClaimDto.UserID, userClaimDto.ClaimID))
                 .ThrowsAsync(new Exception("Test exception"));
-            var controller = new UserClaimController(mockService.Object);
+            var controller = new UserClaimController(mockService.Object, log.Object);
 
             // Act
             var result = await controller.AssociateUserWithClaim(userClaimDto) as ObjectResult;

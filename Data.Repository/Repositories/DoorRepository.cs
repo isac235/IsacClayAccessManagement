@@ -8,14 +8,17 @@
     using Domain.Model;
     using Infrastructure.CrossCutting.CustomExceptions;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class DoorRepository : IDoorRepository
     {
         private readonly OfficesAccessDbContext dbContext;
+        private readonly ILogger<DoorRepository> logger;
 
-        public DoorRepository(OfficesAccessDbContext dbContext)
+        public DoorRepository(OfficesAccessDbContext dbContext, ILogger<DoorRepository> logger)
         {
             this.dbContext = dbContext;
+            this.logger = logger;
         }
 
         public async Task<List<Door>> GetDoorsByOfficeIdAsync(Guid officeId)
@@ -26,6 +29,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting doors by officeId");
                 throw new RepositoryException(nameof(GetDoorsByOfficeIdAsync), ex.Message, ex);
             }
         }
@@ -38,6 +42,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting door by office and door id.");
                 throw new RepositoryException(nameof(GetDoorByOfficeIdAndDoorIdAsync), ex.Message, ex);
             }
         }
@@ -53,6 +58,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while creating door.");
                 throw new RepositoryException(nameof(CreateDoorAsync), ex.Message, ex);
             }
         }

@@ -8,14 +8,17 @@
     using Domain.Model;
     using Infrastructure.CrossCutting.CustomExceptions;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class UserClaimRepository : IUserClaimRepository
     {
         private readonly OfficesAccessDbContext dbContext;
+        private readonly ILogger<UserClaimRepository> logger;
 
-        public UserClaimRepository(OfficesAccessDbContext dbContext)
+        public UserClaimRepository(OfficesAccessDbContext dbContext, ILogger<UserClaimRepository> logger)
         {
             this.dbContext = dbContext;
+            this.logger = logger;
         }
 
         public async Task<List<UserClaim>> GetUserClaimByUserIdAsync(Guid userId)
@@ -26,6 +29,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting userClaims by userId");
                 throw new RepositoryException(nameof(GetUserClaimByUserIdAsync), ex.Message, ex);
             }
         }
@@ -41,6 +45,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while adding userClaims.");
                 throw new RepositoryException(nameof(AddUserClaimAsync), ex.Message, ex);
             }
         }

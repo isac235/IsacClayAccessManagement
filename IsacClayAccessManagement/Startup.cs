@@ -15,6 +15,7 @@ namespace IsacClayAccessManagement
     using Microsoft.Extensions.Logging;
     using Microsoft.IdentityModel.Tokens;
     using Serilog;
+    using Serilog.Events;
     using Services;
     using Services.Interfaces;
 
@@ -93,18 +94,19 @@ namespace IsacClayAccessManagement
 
             services.AddScoped<IClaimRepository, ClaimRepository>();
             services.AddScoped<IClaimService, ClaimService>();
+        }
 
-            // Add Serilog
-            services.AddLogging(config =>
-            {
-                config.AddDebug();
-                config.AddConsole();
-                //etc
-            });
-            //services.AddLogging(loggingBuilder =>
-            //{
-            //    loggingBuilder.AddSerilog(CreateLogger());
-            //});
+        public void ConfigureLogging(ILoggerFactory loggerFactory)
+        {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning) // Adjust log levels as needed
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .WriteTo.File(this.Configuration.GetSection("Logging:Path").Value, rollingInterval: RollingInterval.Day) // Log to a file
+                .CreateLogger();
+
+            loggerFactory.AddSerilog(dispose: true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,7 +122,6 @@ namespace IsacClayAccessManagement
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseSerilogRequestLogging();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -129,21 +130,14 @@ namespace IsacClayAccessManagement
             app.UseAuthentication(); //
             app.UseAuthorization();
 
+            ConfigureLogging(app.ApplicationServices.GetRequiredService<ILoggerFactory>());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-        }
-
-        private Serilog.ILogger CreateLogger()
-        {
-            var logFilePath = Configuration.GetSection("Logging:Path").Value; ;
-
-            return new LoggerConfiguration()
-                .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day) // Log to a file with rolling
-                .CreateLogger();
         }
     }
 }

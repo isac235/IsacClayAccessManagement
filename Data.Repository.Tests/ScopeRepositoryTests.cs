@@ -36,7 +36,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new ScopeRepository(context);
+                var repository = new ScopeRepository(context, null);
                 var newScope = new Scope { ScopeID = Guid.NewGuid(), DoorID = Guid.NewGuid(), ScopeName = "NewScope" };
 
                 // Act
@@ -57,7 +57,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new ScopeRepository(context);
+                var repository = new ScopeRepository(context, null);
                 var doorId = (await context.Scopes.FirstAsync()).DoorID;
 
                 // Act

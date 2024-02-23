@@ -7,14 +7,17 @@
     using Domain.Model;
     using Infrastructure.CrossCutting.CustomExceptions;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class UserRepository : IUserRepository
     {
         private readonly OfficesAccessDbContext dbContext;
+        private readonly ILogger<UserRepository> logger;
 
-        public UserRepository(OfficesAccessDbContext dbContext)
+        public UserRepository(OfficesAccessDbContext dbContext, ILogger<UserRepository> logger)
         {
             this.dbContext = dbContext;
+            this.logger = logger;
         }
 
         public async Task<List<User>> GetAllUsersAsync()
@@ -25,6 +28,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting all users");
                 throw new RepositoryException(nameof(GetAllUsersAsync), ex.Message, ex);
             }
         }
@@ -37,6 +41,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting user by id");
                 throw new RepositoryException(nameof(GetUserByIdAsync), ex.Message, ex);
             }
         }
@@ -53,7 +58,7 @@
             }
             catch (Exception ex)
             {
-
+                this.logger.LogError(ex, "Error occurred while getting user by user name and office");
                 throw new RepositoryException(nameof(GetUserByUserNameAndOffice), ex.Message, ex);
             }
         }
@@ -69,7 +74,7 @@
             }
             catch (Exception ex)
             {
-
+                this.logger.LogError(ex, "Error occurred while creating user");
                 throw new RepositoryException(nameof(CreateUserAsync), ex.Message, ex);
             }
         }

@@ -8,14 +8,17 @@
     using Domain.Model;
     using Infrastructure.CrossCutting.CustomExceptions;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class ScopeRepository : IScopeRepository
     {
         private readonly OfficesAccessDbContext dbContext;
+        private readonly ILogger<ScopeRepository> logger;
 
-        public ScopeRepository(OfficesAccessDbContext dbContext)
+        public ScopeRepository(OfficesAccessDbContext dbContext, ILogger<ScopeRepository> logger)
         {
             this.dbContext = dbContext;
+            this.logger = logger;
         }
 
         public async Task<Scope> CreateScopeAsync(Scope scope)
@@ -29,6 +32,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while creating scope");
                 throw new RepositoryException(nameof(CreateScopeAsync), ex.Message, ex);
             }
         }
@@ -43,6 +47,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting scopes by doorId");
                 throw new RepositoryException(nameof(GetScopesByDoorIdAsync), ex.Message, ex);
             }
         }

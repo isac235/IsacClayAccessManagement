@@ -34,7 +34,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new UserRepository(context);
+                var repository = new UserRepository(context, null);
 
                 // Act
                 var users = await repository.GetAllUsersAsync();
@@ -50,7 +50,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new UserRepository(context);
+                var repository = new UserRepository(context, null);
                 var userId = (await context.Users.FirstAsync()).UserID;
 
                 // Act
@@ -67,7 +67,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new UserRepository(context);
+                var repository = new UserRepository(context, null);
                 var user = await context.Users.FirstAsync();
 
                 // Act
@@ -84,7 +84,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new UserRepository(context);
+                var repository = new UserRepository(context, null);
                 var newUser = new User { UserID = Guid.NewGuid(), Username = "newuser", OfficeID = Guid.NewGuid() };
 
                 // Act

@@ -27,7 +27,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new AccessEventRepository(context);
+                var repository = new AccessEventRepository(context, null);
                 var newEvent = new AccessEvent { EventID = Guid.NewGuid(), EventTime = DateTime.Now };
 
                 // Act
@@ -48,7 +48,7 @@
             using (var context = new OfficesAccessDbContext(_options))
             {
                 // Arrange
-                var repository = new AccessEventRepository(context);
+                var repository = new AccessEventRepository(context, null);
                 var eventsToAdd = new List<AccessEvent>
                 {
                     new AccessEvent { EventID = Guid.NewGuid(), EventTime = DateTime.Now },

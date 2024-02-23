@@ -3,6 +3,7 @@
     using DTO;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
     using Services.Interfaces;
     using System.Threading.Tasks;
 
@@ -12,10 +13,12 @@
     public class RoleController : ControllerBase
     {
         private readonly IRoleService roleService;
+        private readonly ILogger<RoleController> logger;
 
-        public RoleController(IRoleService roleService)
+        public RoleController(IRoleService roleService, ILogger<RoleController> logger)
         {
             this.roleService = roleService;
+            this.logger = logger;
         }
 
         [Authorize(Roles = "Admin")]
@@ -36,6 +39,7 @@
             }
             catch (System.Exception ex)
             {
+                this.logger.LogError(ex, "Controller Error creating role.");
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }

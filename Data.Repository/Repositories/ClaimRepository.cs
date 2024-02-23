@@ -6,14 +6,17 @@
     using Domain.Model;
     using Infrastructure.CrossCutting.CustomExceptions;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class ClaimRepository : IClaimRepository
     {
         private readonly OfficesAccessDbContext dbContext;
+        private readonly ILogger<ClaimRepository> logger;
 
-        public ClaimRepository(OfficesAccessDbContext context)
+        public ClaimRepository(OfficesAccessDbContext context, ILogger<ClaimRepository> logger)
         {
             this.dbContext = context;
+            this.logger = logger;
         }
 
         public async Task<Claim> GetClaimByIdAsync(Guid claimId)
@@ -24,6 +27,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting claim by id");
                 throw new RepositoryException(nameof(GetClaimByIdAsync), ex.Message, ex);
             }
         }
@@ -39,6 +43,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while adding claim");
                 throw new RepositoryException(nameof(AddClaimAsync), ex.Message, ex);
             }
         }

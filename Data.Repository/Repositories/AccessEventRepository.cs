@@ -8,14 +8,17 @@
     using Domain.Model;
     using Infrastructure.CrossCutting.CustomExceptions;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Logging;
 
     public class AccessEventRepository : IAccessEventRepository
     {
         private readonly OfficesAccessDbContext dbContext;
+        private readonly ILogger<AccessEventRepository> logger;
 
-        public AccessEventRepository(OfficesAccessDbContext dbContext)
+        public AccessEventRepository(OfficesAccessDbContext dbContext, ILogger<AccessEventRepository> logger)
         {
             this.dbContext = dbContext;
+            this.logger = logger;
         }
 
         public async Task<List<AccessEvent>> GetAllAccessEventsAsync()
@@ -26,6 +29,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting all access events.");
                 throw new RepositoryException(nameof(GetAllAccessEventsAsync), ex.Message, ex);
             }
         }
@@ -38,6 +42,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while getting all access events by doorId.");
                 throw new RepositoryException(nameof(GetAllAccessEventsByDoorId), ex.Message, ex);
             }
         }
@@ -53,6 +58,7 @@
             }
             catch (Exception ex)
             {
+                this.logger.LogError(ex, "Error occurred while creating access event");
                 throw new RepositoryException(nameof(CreateAccessEventAsync), ex.Message, ex);
             }
         }
