@@ -1,0 +1,17 @@
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Data.Repository.deps.json
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Data.Repository.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\ref\Data.Repository.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Data.Repository.pdb
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Domain.Model.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Infrastructure.CrossCutting.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Domain.Model.pdb
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\bin\Debug\net5.0\Infrastructure.CrossCutting.pdb
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.csproj.AssemblyReference.cache
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.AssemblyInfoInputs.cache
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.AssemblyInfo.cs
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.csproj.CopyComplete
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\ref\Data.Repository.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Data.Repository\obj\Debug\net5.0\Data.Repository.pdb

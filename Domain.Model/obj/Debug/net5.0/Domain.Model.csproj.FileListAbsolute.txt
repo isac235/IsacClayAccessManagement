@@ -1,0 +1,11 @@
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\bin\Debug\net5.0\Domain.Model.deps.json
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\bin\Debug\net5.0\Domain.Model.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\bin\Debug\net5.0\ref\Domain.Model.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\bin\Debug\net5.0\Domain.Model.pdb
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\Domain.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\Domain.Model.AssemblyInfoInputs.cache
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\Domain.Model.AssemblyInfo.cs
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\Domain.Model.csproj.CoreCompileInputs.cache
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\Domain.Model.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\ref\Domain.Model.dll
+C:\Users\Isac Carneiro\Source\Repos\IsacClayAccessManagement\Domain.Model\obj\Debug\net5.0\Domain.Model.pdb

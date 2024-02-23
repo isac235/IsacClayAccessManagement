@@ -1,0 +1,410 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Services.Tests\\Services.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj",
+        "projectName": "Data.Repository",
+        "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj",
+        "packagesPath": "C:\\Users\\Isac Carneiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isac Carneiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Model\\Domain.Model.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Model\\Domain.Model.csproj"
+              },
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Infrastructure.CrossCutting\\Infrastructure.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Infrastructure.CrossCutting\\Infrastructure.CrossCutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Model\\Domain.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Model\\Domain.Model.csproj",
+        "projectName": "Domain.Model",
+        "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Model\\Domain.Model.csproj",
+        "packagesPath": "C:\\Users\\Isac Carneiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isac Carneiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Isac Carneiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isac Carneiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj"
+              },
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.Core": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj",
+        "projectName": "DTO",
+        "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\Isac Carneiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isac Carneiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Infrastructure.CrossCutting\\Infrastructure.CrossCutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Infrastructure.CrossCutting\\Infrastructure.CrossCutting.csproj",
+        "projectName": "Infrastructure.CrossCutting",
+        "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Infrastructure.CrossCutting\\Infrastructure.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\Isac Carneiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Infrastructure.CrossCutting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isac Carneiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Services.Tests\\Services.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Services.Tests\\Services.Tests.csproj",
+        "projectName": "Services.Tests",
+        "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Services.Tests\\Services.Tests.csproj",
+        "packagesPath": "C:\\Users\\Isac Carneiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Services.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isac Carneiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Data.Repository\\Data.Repository.csproj"
+              },
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\Domain.Services\\Services.csproj"
+              },
+              "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Isac Carneiro\\Source\\Repos\\IsacClayAccessManagement\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
